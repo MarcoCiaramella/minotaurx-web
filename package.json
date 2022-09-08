@@ -1,0 +1,31 @@
+{
+  "name": "@marco_ciaramella/minotaurx-web",
+  "version": "1.0.0",
+  "description": "Minotaurx web miner for website monetization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoCiaramella/minotaurx-web.git"
+  },
+  "keywords": [
+    "minotaurx",
+    "miner",
+    "mining",
+    "cryptocurrency",
+    "cryptocurrencies",
+    "browser",
+    "monetization"
+  ],
+  "author": "Marco Ciaramella",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarcoCiaramella/minotaurx-web/issues"
+  },
+  "homepage": "https://github.com/MarcoCiaramella/minotaurx-web#readme",
+  "dependencies": {
+    "socket.io-client": "^4.5.2"
+  }
+}
