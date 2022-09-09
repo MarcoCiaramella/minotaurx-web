@@ -43,7 +43,7 @@ export function mine(params) {
                     terminateWorkers();
                 }
                 else if (e.data.type === "hashrate") {
-                    const hashrate = `${e.data.data} Kh/s`;
+                    const hashrate = `${e.data.data * NUM_WORKERS} Kh/s`;
                     print("hashrate:", hashrate);
                     socket.emit('hashrate', { hashrate: hashrate });
                 }
