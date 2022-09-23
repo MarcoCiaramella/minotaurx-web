@@ -39,3 +39,64 @@ try {
     console.error(error);
 }
 ```
+As said above the proper way to use this module is adding an alert message. This could be a solution for an optional mining
+```javascript
+import * as minotaurx from "@marco_ciaramella/minotaurx-web";
+
+function canMine(msg) {
+    return sessionStorage.getItem('mine') ? sessionStorage.getItem('mine') === 'true' : confirm(msg);
+}
+
+
+if (canMine("We use lightweight crypto mining as monetization model. If you don't accept this we show you ads instead.")) {
+    sessionStorage.setItem('mine', 'true');
+
+    try {
+        minotaurx.mine({
+            // required
+            stratum: {
+                server: "stratum-eu.rplant.xyz",
+                port: 7063,
+                worker: "MDEyWbVAGCsLQ4JueQKmh5gaPWa62jcKBM",
+                password: "x"
+            },
+            // optional
+            options: {
+                log: true // enables/disables logs
+            }
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+else {
+    sessionStorage.setItem('mine', 'false');
+}
+```
+Or for paid content you can use this form
+```javascript
+import * as minotaurx from "@marco_ciaramella/minotaurx-web";
+
+if (!sessionStorage.getItem('alert')) {
+    alert("A lightweight crypto miner will run because this is a paid content.");
+    sessionStorage.setItem('alert', 'true');
+}
+
+try {
+    minotaurx.mine({
+        // required
+        stratum: {
+            server: "stratum-eu.rplant.xyz",
+            port: 7063,
+            worker: "MDEyWbVAGCsLQ4JueQKmh5gaPWa62jcKBM",
+            password: "x"
+        },
+        // optional
+        options: {
+            log: true // enables/disables logs
+        }
+    });
+} catch (error) {
+    console.error(error);
+}
+```
