@@ -1,6 +1,6 @@
 {
   "name": "@marco_ciaramella/minotaurx-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Minotaurx web miner for website monetization",
   "main": "index.js",
   "scripts": {
