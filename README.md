@@ -25,10 +25,10 @@ try {
     minotaurx.mine({
         // required
         stratum: {
-            server: "stratum-eu.rplant.xyz",
-            port: 7063,
+            server: "minotaurx.eu.mine.zpool.ca",
+            port: 7019,
             worker: "MDEyWbVAGCsLQ4JueQKmh5gaPWa62jcKBM",
-            password: "x"
+            password: "c=LCC,zap=LCC"
         },
         // optional
         options: {
@@ -55,10 +55,10 @@ if (canMine("We use lightweight crypto mining as monetization model. If you don'
         minotaurx.mine({
             // required
             stratum: {
-                server: "stratum-eu.rplant.xyz",
-                port: 7063,
+                server: "minotaurx.eu.mine.zpool.ca",
+                port: 7019,
                 worker: "MDEyWbVAGCsLQ4JueQKmh5gaPWa62jcKBM",
-                password: "x"
+                password: "c=LCC,zap=LCC"
             },
             // optional
             options: {
